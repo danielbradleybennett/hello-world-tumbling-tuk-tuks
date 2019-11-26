@@ -1,25 +1,34 @@
+/* document.querySelector(".theBox").addEventListener("mouseOver", () => {
+    document.querySelector(".unorderedList").classList.add("visible")
+    document.querySelector(".unorderedList").classList.remove("invisible")
+    
+})
+
 const borderColorChange = () => {
-  const travelTips = document.querySelectorAll(".cities__list")
+  const travelTips = document.querySelectorAll("ul")
   
 
-  for (const cities__list of travelTips) {
-      cities__list.addEventListener(
+  for (const ul of travelTips) {
+      ul.addEventListener(
           "mouseover",
           (theMouseOverEvent) => {
-              cities__list.classList.add("revealInfo")
+              ul.style.display ="block";
           }
       )
 
 
-      cities__list.addEventListener("mouseout", (theMouseOutEvent) => {
-          cities__list.classList.remove("revealInfo")
+      ul.addEventListener("mouseout", (theMouseOutEvent) => {
+          ul.style.display = "none";
       })
   }
-}
 
 
 
+document.querySelector("#myCard").classList.toggle("flip")
+*/
 
+
+document.querySelector("#myCard").classList.toggle("flip")
 
 
 export default borderColorChange

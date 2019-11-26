@@ -1,3 +1,4 @@
-import borderColorChange from './dialogue.js'
+/*import borderColorChange from './dialogue.js'
 
-borderColorChange()
+borderColorChange() */
+document.querySelector("#myCard").classList.toggle("flip")

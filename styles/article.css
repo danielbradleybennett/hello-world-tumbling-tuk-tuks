@@ -33,7 +33,6 @@
   
 }
 
-<<<<<<< HEAD
 }
 .revealInfo { background: white;
   border: solid; 
@@ -52,8 +51,24 @@
 
 
 
+.flip-container:hover .flipper, .flip-container.hover .flipper, .flip-container.flip .flipper {
+	transform: rotateY(180deg);
+}
 
-.info__section { background-image: url(/images/Scotland\ Village.jpg);
+
+.back { background-image: url(/images/Scotland\ Village.jpg);
+  border: solid; 
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+
+
+}
+
+
+
+
+.info__section { 
   border: solid; 
   padding: 20px;
   width: 200px;
@@ -63,7 +78,6 @@
 
 
 }
-=======
 .landmarks__title{
   font-weight: bold;
 }
@@ -71,4 +85,46 @@
 .leaders__title{
   font-weight: bold;
 }
->>>>>>> master
+
+/* entire container, keeps perspective */
+.flip-container {
+	perspective: 1000px;
+}
+	/* flip the pane when hovered */
+	.flip-container:hover .flipper, .flip-container.hover .flipper {
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 480px;
+}
+
+/* flip speed goes here */
+.flipper {
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+	z-index: 2;
+	/* for firefox 31 */
+	transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+	transform: rotateY(180deg);
+}

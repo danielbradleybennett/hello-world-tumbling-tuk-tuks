@@ -47,21 +47,37 @@
       <section class="info__section">
         <!-- list of landmarks -->
         <div class="landmarks__title">Landmarks</div>
-        <ul class="landmarks__list">
-          <li>Edinburg Castle</li>
-          <li>Loch Ness</li>
-          <li>Loch Lomond</li>
-          <li>Isle of Skye</li>
-          <li>Arthur's Seat</li>
-        </ul>
+         
+          <ul class="landmarks__list">
+            <li>Edinburg Castle</li>
+            <li>Loch Ness</li>
+            <li>Loch Lomond</li>
+            <li>Isle of Skye</li>
+            <li>Arthur's Seat</li>
+          </ul>
+        
       </section>
       <!-- list of heads of state -->
-      <section class="info__section">
-        <div class="leaders__title" id="leaders">Heads of State</div>
-        <ul class="leaders__list">
-          <li>Nicola Sturgeon</li>
-          <li>Donald Dewar</li>
-          <li>Queen Elizabeth II</li>
+      <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+        <div class="flipper">
+          <div class="front">
+            <!-- front content -->
+            <section class="info__section">
+              <div class="leaders__title" id="leaders">Heads of State</div>
+              <ul class="leaders__list">
+                <li>Nicola Sturgeon</li>
+                <li>Donald Dewar</li>
+                <li>Queen Elizabeth II</li>
+              </ul>
+            </section>
+          </div>
+          <div class="back">
+            <!-- back content -->
+           
+          </div>
+        </div>
+      </div>
+      
 
 
         </ul>
